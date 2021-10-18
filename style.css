@@ -16,6 +16,10 @@ html{
 	background-position: center;
 	background-size: cover;
 	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
 }
 
 .body-container::before{
@@ -33,7 +37,6 @@ html{
 .quote-container{
 	width: 80%;
 	margin: auto;
-	padding-top: 4rem;
 	z-index: 1;
 	position: relative;
 }
@@ -59,7 +62,6 @@ html{
 .time-section{
 	z-index: 1;
 	position: relative;
-	padding-top: 20rem;
 	width: 80%;
 	margin: auto;
 	display: flex;
@@ -68,7 +70,7 @@ html{
 }
 
 .time-section-open{
-	padding-top: 5rem;
+	transform: translateY(-10rem);
 }
 
 .message p{
@@ -147,6 +149,7 @@ button svg{
 }
 
 .more-open{
+	max-height: 45vh;
 	color: #303030;
 	width: 100%;
 	position: absolute;
@@ -173,6 +176,7 @@ bottom: -100%;
 bottom: 0;
   }
 } 
+
 
 
 .more-container{
@@ -224,15 +228,13 @@ bottom: 0;
 }
 
 @media only screen and (max-width: 40rem){
-	.time-section{
-		padding-top: 25rem;
-	}
+
 	.time-section-open{
-		padding-top: 5rem;
+		padding-top: 1.5rem;
 	}
 	.more-container{
 		width: 90%;
-		padding: 4rem 1rem;
+		padding: 2rem 1rem;
 		grid-template-columns: repeat(1, 1fr);
 	}
 	.more-2{

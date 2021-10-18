@@ -18,8 +18,8 @@ const weekNum = document.getElementById('week-number');
 const timeSection = document.getElementById('time-section');
 
 
-function getRandomQuote(){
-	fetch('https://api.quotable.io/random')
+async function getRandomQuote(){
+await fetch('https://api.quotable.io/random')
 	.then(response => response.json())
 	.then((data) =>{
 		quote.innerHTML = '"' + data.content + '"';
@@ -29,8 +29,8 @@ function getRandomQuote(){
 
 getRandomQuote();
 
-function updateTime(){
-	fetch("https://worldtimeapi.org/api/ip")
+async function updateTime(){
+	await fetch("https://worldtimeapi.org/api/ip")
 	.then(response => response.json())
 	.then((data) =>{
 		const date = new Date(data.datetime);

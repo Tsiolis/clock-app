@@ -199,7 +199,7 @@ bottom: 0;
 	border-left: 1px solid #3030303b;
 }
 
-@media only screen and (max-width: 53rem){
+@media only screen and (max-width: 65rem){
 	.time-section{
 		flex-direction: column;
 		align-items: flex-start;
@@ -211,10 +211,15 @@ bottom: 0;
 		width: 90%;
 	}
 	h1{
-		font-size: 8rem;
+		font-size: 10rem;
 	}
 	.more-1 h2{
 		font-size: 2rem;
+	}
+	#refresh{
+		position: absolute;
+		right: 0;
+		bottom: 0;
 	}
 }
 
@@ -240,12 +245,20 @@ bottom: 0;
 		align-items: center;
 		padding-top: 1.5rem;
 	}
-	.currently, .comma{
-		display: none;
+	.message p{
+		flex-direction: column;
+		align-items: flex-start;
 	}
-#refresh{
-	position: absolute;
-	right: 0;
-	bottom: 0;
-}
+	.currently{
+	white-space: pre;
+	}
+	h1{
+		font-size: 6rem;
+	}
+	.more-1 h2, .more-2 h2{
+		font-size: 1.5rem;
+	}
+	.time-zone-div{
+		flex-direction: column;
+	}
 }
